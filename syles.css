@@ -1,0 +1,209 @@
+:root {
+    --primary : #4697bf;
+    --secondary : #293039;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+body{
+    background-color: var(--secondary);
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/******* HEADER ********/
+
+header{
+    height: 60vh;
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .container{
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color: var(--primary);
+    font-size: 3rem;
+    margin: 0;
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
+header h2{
+    color: #fff;
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.3rem;
+    text-transform: uppercase;
+}
+header span {
+    padding: 0.3rem;
+    color: var(--primary);
+}
+
+header nav{
+    margin-bottom: 1rem ;
+    display: flex;
+    padding: 0.4rem;
+    justify-content: space-evenly;
+    background-color: var(--primary);
+}
+header nav a{
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/********* ABOUT *********/
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+
+.about{
+    margin: auto 2rem;
+    color: #fff;
+}
+.about h2{
+    text-transform: uppercase;
+}
+.about p{
+    max-width: 70%;
+}
+
+#about img{
+    border-left: 5px solid rgb(212, 212, 212);
+    max-height: 80%;
+    padding: 0;
+    margin: 0;
+    max-width: 45%;
+}
+
+/********* PROYECTS *********/
+
+#proyects{
+    padding: 2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 4rem auto;
+}
+
+#proyects h2{
+    margin: 2rem;
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#proyects h3{
+    color: var(--primary);
+}
+
+#proyects p{
+    color: #fff;
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+#proyects img {
+    max-width: 50%;
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+}
+
+/********** SKILLS *********/
+
+#skills{
+    display: grid;
+    background-color: var(--primary);
+}
+
+#skills .container {
+    padding: 2rem;
+}
+
+#skills h2 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: rgb(29, 29, 29);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 3rem;
+
+}
+
+.skills-grid img {
+    margin: auto auto;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+
+/********* CONTACT *********/
+
+#contact h2{
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#contact div{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#contact a{
+    max-width: 30px;
+}
+
+#contact i {
+    padding: 1rem 0;
+    font-size:  2rem;
+    color: #fff;
+}
+
+footer{
+    background-color: var(--primary);
+    text-align: center;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+
+.box {
+    display: block;
+  }
