@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +16,18 @@
                 <h1>Francisco Guardia</h1>
                 <h2>Full Stack Web Developer</h2>
 
-                <span>|||||||||||||||</span>
+                <div id="loading"></div>
+
             </div>
 
-            <nav>
-                <a href="#about">About</a>
-                <a href="#proyects">Proyects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="navegacion">
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#proyects">Proyects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
 
         </header>
 
@@ -68,16 +72,16 @@
                 <h2>Skills Y Habilidades</h2>
 
                 <div class="skills-grid">
-                    <img src="img/HTML.svg" alt="html">
-                    <img src="img/css.png" alt="css">
-                    <img src="img/typescript.png" alt="typescript">
-                    <img src="img/laravel.png" alt="laravel">
-                    <img src="img/node.png" alt="nodejs">
-                    <img src="img/angular.png" alt="angular">
-                    <img src="img/bootstrap.png" alt="bootstrap">
-                    <img src="img/docker.png" alt="docker">
-                    <img src="img/git.png" alt="git">
-                    <img src="img/postman.png" alt="postman">
+                    <img class="box" src="img/HTML.svg" alt="html">
+                    <img class="box" src="img/css.png" alt="css">
+                    <img class="box" src="img/typescript.png" alt="typescript">
+                    <img class="box" src="img/laravel.png" alt="laravel">
+                    <img class="box" src="img/node.png" alt="nodejs">
+                    <img class="box" src="img/angular.png" alt="angular">
+                    <img class="box" src="img/bootstrap.png" alt="bootstrap">
+                    <img class="box" src="img/docker.png" alt="docker">
+                    <img class="box" src="img/git.png" alt="git">
+                    <img class="box" src="img/postman.png" alt="postman">
                 </div>
             </div>
         </section>
@@ -87,17 +91,19 @@
                 <h2>Contacto</h2>
 
                 <div>
-                    <a href="https://www.linkedin.com/in/francisco-guardia-746b1b200" target=”_blank”><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/francisco-guardia-746b1b200" target=”_blank”><i class="fab fa-linkedin "></i></a>
                     <a href="mailto:pancho.guardia.17@gmail.com" target=”_blank”><i class="far fa-envelope"></i></a>
                     <a href="https://github.com/PanchoG17" target=”_blank”><i class="fab fa-github"></i></a>
                 </div>
 
-                <div class="box green"></div>
-                <div class="box orange"></div>
-                <div class="box grey"></div>
+                <div id="box1" class="green"></div>
+                <div id="box2"class="orange"></div>
+                <div id="box3"class="grey"></div>
 
             </div>
             <footer> <span> © 2021 Pancho Guardia | All Rights Reserved </span></footer>
         </section>
+
+<script src="js/index.js"></script>
 </body>
 </html>
