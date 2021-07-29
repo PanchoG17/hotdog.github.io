@@ -1,28 +1,25 @@
 
 /**** GSAP ****/
 
-if (window.matchMedia("(max-width: 450px)").matches){
+let animar = (px) => {
 
-  gsap.to('#loading' , {
-      duration: 5,
-      ease: "power2.inOut",
-      x: 230
-  })
-
-}else{
     gsap.to('#loading' , {
       duration: 5,
       ease: "power2.inOut",
-      x: 400
+      x: px
   })
+
 }
 
+
 if (window.matchMedia("(max-width: 450px)").matches){
-    gsap.to('#loading' , {
-      duration: 5,
-      ease: "power2.inOut",
-      x: 500
-})
+
+  animar(200);
+
+}else{
+
+  animar(450);
+
 }
 
 
