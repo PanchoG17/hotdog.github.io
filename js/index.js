@@ -1,10 +1,31 @@
 
 /**** GSAP ****/
-gsap.to('#loading' , {
-    duration: 5,
-    ease: "power2.inOut",
-    x: 500
+
+if (window.matchMedia("(max-width: 450px)").matches){
+
+  gsap.to('#loading' , {
+      duration: 5,
+      ease: "power2.inOut",
+      x: 230
+  })
+
+}else{
+    gsap.to('#loading' , {
+      duration: 5,
+      ease: "power2.inOut",
+      x: 400
+  })
+}
+
+if (window.matchMedia("(max-width: 450px)").matches){
+    gsap.to('#loading' , {
+      duration: 5,
+      ease: "power2.inOut",
+      x: 500
 })
+}
+
+
 
 
 gsap.to(".box" ,{
