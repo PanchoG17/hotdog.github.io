@@ -1,6 +1,8 @@
 
 /**** GSAP ****/
 
+gsap.registerPlugin(ScrollTrigger);
+
 let animar = (px) => {
 
     gsap.to('#loading' , {
@@ -11,21 +13,18 @@ let animar = (px) => {
 
 }
 
-
 if (window.matchMedia("(max-width: 450px)").matches){
 
-  animar(200);
+  animar(250);
 
 }else{
 
-  animar(450);
+  animar(480);
 
 }
 
-
-
-
 gsap.to(".box" ,{
+    scrollTrigger: ".box",
     duration:1,
     scale: 2.2, 
     ease: "elastic.out(1,2)",
@@ -36,4 +35,23 @@ gsap.to(".box" ,{
       from: "random"
     }
   });
+
+$('.contact-link').mouseover(function(){
+    gsap.to(this, {
+      duration: 1,
+      rotation: 360,
+      scaleX: 2,
+      scaleY: 2
+    });
+})
+
+$('.contact-link').mouseout(function(){
+  gsap.to(this, {
+    duration: 1,
+    rotation: 360,
+    scaleX: 1,
+    scaleY: 1
+  });
+})
+
 
