@@ -36,6 +36,7 @@ gsap.to(".box" ,{
     }
   });
 
+
 $('.contact-link').mouseover(function(){
     gsap.to(this, {
       duration: 1,
@@ -54,4 +55,16 @@ $('.contact-link').mouseout(function(){
   });
 })
 
+window.onscroll = function() {stickyNav()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyNav() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("fixed")
+  } else {
+    navbar.classList.remove("fixed");
+  }
+}
 

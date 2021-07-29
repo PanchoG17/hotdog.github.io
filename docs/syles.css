@@ -64,9 +64,19 @@ header span {
     color: var(--primary);
 }
 
-.navegacion{
+#navbar{
     background-color: var(--primary);
     padding: 1rem;
+    width: 100%;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
+    -webkit-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
+    -moz-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
 }
 
 header nav{
