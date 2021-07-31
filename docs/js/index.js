@@ -3,6 +3,9 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+///// Header animation
+
 let animar = (px) => {
 
     gsap.to('#loading' , {
@@ -13,15 +16,17 @@ let animar = (px) => {
 
 }
 
-if (window.matchMedia("(max-width: 450px)").matches){
+if (window.matchMedia("(max-width: 550px)").matches){
 
-  animar(250);
+  animar(280);
 
 }else{
 
-  animar(480);
+  animar(450);
 
 }
+
+////// Skills animation
 
 gsap.to(".box" ,{
     scrollTrigger: ".box",
@@ -36,6 +41,8 @@ gsap.to(".box" ,{
     }
   });
 
+
+////// Contact animation
 
 $('.contact-link').mouseover(function(){
     gsap.to(this, {
@@ -55,16 +62,58 @@ $('.contact-link').mouseout(function(){
   });
 })
 
-window.onscroll = function() {stickyNav()};
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+/******* Sticky menu *******/
 
-function stickyNav() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("fixed")
-  } else {
-    navbar.classList.remove("fixed");
-  }
+window.onscroll = function() { stickyMenu() };
+
+var menu = document.getElementById("main-menu");
+var sticky = menu.offsetTop;
+
+var nav = $('.menu-mobile');
+let alturaBarra = nav.innerHeight();
+
+
+
+function stickyMenu() {
+
+    var mobileMenu = $('#main-menu');
+    let alturaMobile = mobileMenu.innerHeight();
+
+    if (window.pageYOffset >= sticky) {
+
+      if ($("#main-menu").hasClass('active')) {
+
+        menu.classList.add("fixed");
+        $('body').css({'margin-top': alturaMobile+'px'});
+
+      }else{
+        menu.classList.add("fixed");
+        $('body').css({'margin-top': alturaBarra+'px'});
+      }
+
+
+    } else {
+      menu.classList.remove("fixed");
+      $('body').css({'margin-top': 0});
+    }
+
 }
+
+/***** Mobile Menu *****/
+
+$('#menu-btn').click(function(){
+
+  $('#navbar').slideToggle();
+
+  if ($('#main-menu').hasClass('active')) {
+
+    menu.classList.remove('active');
+    $('body').css({'margin-top': 0});
+
+  }else{
+    menu.classList.add('active');
+  }
+
+})
 

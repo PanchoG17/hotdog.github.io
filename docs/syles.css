@@ -27,14 +27,12 @@ h1,h2{
 
 /******* HEADER ********/
 
-
-
-
 header{
     overflow: hidden;
-    height: 60vh;
     display: flex;
+    padding-top: 4rem;
     flex-direction: column;
+    text-align: center;
     justify-content: space-between;
 }
 
@@ -47,10 +45,16 @@ header .container{
 }
 h1{
     color: var(--primary);
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     padding: 0.3rem;
+    transition: all 0.2s ease-out;
     text-transform: uppercase;
+}
+@media(min-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
 }
 header h2{
     color: #fff;
@@ -59,39 +63,69 @@ header h2{
     padding: 0.3rem;
     text-transform: uppercase;
 }
-header span {
-    padding: 0.3rem;
-    color: var(--primary);
+
+#main-menu{
+    background-color: var(--secondary);
 }
 
 #navbar{
     background-color: var(--primary);
     padding: 1rem;
-    width: 100%;
+    max-width: 100%;
+    display: none;
+    margin-top: 0.2rem;
+
 }
 
-.fixed{
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
-    -webkit-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
-    -moz-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
-}
-
-header nav{
-    display: flex;
-    justify-content: space-evenly;
-}
 header nav a{
+    display: block;
+    padding: 0.5rem 0;
+    margin: 0.4rem 0;
     font-size: 1.4rem;
     color: #fff;
     text-decoration: none;
     transition: all 0.3s ease-out;
 }
 
+.menu-mobile{
+    padding: 1.3rem;
+    background-color: var(--primary);
+}
+#menu-btn{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+@media(min-width: 550px) {
+    header nav{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    header nav a{
+        padding: 0;
+    }
+    .menu-mobile{
+        display: none;
+    }
+    #navbar{
+        margin: 0;
+        padding: 0.6rem 0;
+        display: flex;
+    }
+}
+
 header nav a:hover{
     transform: scale(1.2,1.2);
+}
+.fixed{
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
+    -webkit-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
+    -moz-box-shadow: 1px 20px 28px -10px rgba(41,48,57,1);
 }
 
 #loading {
@@ -208,6 +242,7 @@ header nav a:hover{
 /********** SKILLS *********/
 
 #skills{
+    padding: 2rem 0;
     overflow-x: hidden;
     display: grid;
     background-color: var(--primary);
@@ -305,6 +340,7 @@ header nav a:hover{
 /********* CONTACT *********/
 
 #contact{
+    text-align: center;
     background-image: linear-gradient(rgba(26, 26, 26, 0.89),rgba(36, 35, 35, 0.842)),url(img/contact-bg.png);
     background-position: cover;
 }
@@ -315,16 +351,34 @@ header nav a:hover{
     font-size: 2rem;
 }
 
-#contact div{
+.flex-footer{
     margin-bottom: 0.2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 100%;
+}
 #contact a{
+    margin: 0 auto;
     transition: all 0.2s ease-out;
     max-width: 30px;
+}
+
+@media(min-width: 550px) {
+    .links{
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    #contact a{
+        margin: 0;
+    }
 }
 
 #contact i {
@@ -338,4 +392,10 @@ footer{
     text-align: center;
     padding: 0.5rem;
     color: #fff;
+}
+
+@media(min-width: 550px) {
+    #contact{
+        text-align: left;
+    }
 }
